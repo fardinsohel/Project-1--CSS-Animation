@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/images/stars.png" id="stars" alt="">
+        <img src="/images/moon.png" id="moon" alt="">
+        <img src="/images/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="moonText">Moon Light</h2>
+        <a href="#second" id="btn">Explore</a>
+        <img src="/images/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="second" id="second">
+        <h2>Parallax Scroll Efffects</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima et sit enim nemo itaque commodi illum. Odit impedit, aperiam veniam optio magni quae quibusdam delectus maiores aliquam numquam nam sint eaque quia voluptate pariatur cum? Voluptatem voluptate eum quae atque esse praesentium deleniti labore at dignissimos, reiciendis, voluptas magnam officia necessitatibus architecto sapiente ipsa perferendis optio! Unde deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla, labore obcaecati illo est magnam asperiores Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed blanditiis porro nemo molestias  quisquam odio inventore perspiciatis necessitatibus, earum omnis quam? Pariatur, nemo quas culpa fugit fuga odit magnam eius vitae assumenda. <br><br>pariatur cum? Voluptatem voluptate eum quae atque esse praesentium Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus voluptates dolorum necessitatibus natus quaerat aliquid, porro nihil iste mollitia possimus alias asperiores? Reprehenderit, exercitationem temporibus nam odio voluptas necessitatibus quia itaque inventore  deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla,<br><br>pariatur cum? Voluptatem voluptate eum quae atque esse praesentium deleniti labore at dignissimos, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem harum nihil veritatis. Ad maxime quis eum sequi rem. Quod, perferendis?reiciendis, voluptas magnam officia necessitatibus architecto corrupti unde veritatis, minima quam consequuntur nesciunt!deleniti labore at dignissimos, reiciendis, voluptas magnam officia necessitatibus architecto sapiente ipsa perferendis optio! Undesapiente ipsa perferendis optio! Unde deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla,<br><br>pariatur cum? Voluptatem voluptate eum quae atque esse praesentium Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus voluptates dolorum necessitatibus natus quaerat aliquid, porro nihil iste mollitia possimus alias asperiores? Reprehenderit, exercitationem temporibus nam odio voluptas necessitatibus quia itaque inventore  deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla,<br><br>pariatur cum? Voluptatem voluptate eum quae atque esse praesentium deleniti labore at dignissimos, Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem harum nihil veritatis. Ad maxime quis eum sequi rem. Quod, perferendis?reiciendis, voluptas magnam officia necessitatibus architecto corrupti unde veritatis, minima quam consequuntur nesciunt!deleniti labore at dignissimos, reiciendis, voluptas magnam officia necessitatibus architecto sapiente ipsa perferendis optio! Undesapiente ipsa perferendis optio! Unde deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla,<br><br>pariatur cum? Voluptatem voluptate eum quae atque esse praesentium Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex accusamus voluptates dolorum necessitatibus natus quaerat aliquid, porro nihil iste mollitia possimus alias asperiores? Reprehenderit, exercitationem temporibus nam odio voluptas necessitatibus quia itaque inventore  deserunt quibusdam, dolore beatae nihil, necessitatibus et cupiditate autem vero nemo sint non id vitae voluptates iusto quam quos sunt aspernatur accusamus temporibus aut quia eaque aperiam? Atque aliquid fuga libero pariatur! Officia, quaerat repellendus. Excepturi nulla,</p>
+    </div>
+
+    <script>
+        let stars =document.getElementById("stars");
+        let moon =document.getElementById("moon");
+        let mountains_behind =document.getElementById("mountains_behind");
+        let moonText =document.getElementById("moonText");
+        let btn =document.getElementById("btn");
+        let header = document.querySelector("header");
+        let mountains_front =document.getElementById("mountains_front");
+
+        window.addEventListener("scroll", function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + "px";
+            moon.style.top = value * 1.05 + "px";
+            mountains_behind.style.top = value * .3 + "px";
+            mountains_front.style.top = value * 0 + "px";
+            moonText.style.marginRight = value * 3 + "px";
+            moonText.style.marginTop = value * 1 + "px";
+            btn.style.marginTop = value * 1 + "px";
+            header.style.Top = value * 0.5 + "px";
+        })
+       
+    </script>
+
+</body>
+</html>
